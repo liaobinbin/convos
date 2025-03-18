@@ -44,7 +44,7 @@ socket.update({debug: 'WebSocket'});
 window.convosWebSockeet = socket;
 
 convosApi.url(route.urlFor('/api'));
-route.update({baseUrl: settings('base_url'), enabled: true});
+route.update({baseUrl: location.origin, enabled: true});
 socket.update({url: route.wsUrlFor('/events')});
 user.on('wsEventSentJoin', e => route.go(route.conversationPath(e)));
 registerServiceWorker().catch(err => console.error('[serviceWorker]', err));
