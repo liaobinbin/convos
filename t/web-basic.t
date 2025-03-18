@@ -20,7 +20,7 @@ subtest defaults => sub {
     ->element_exists(qq(meta[name="apple-mobile-web-app-capable"][content="yes"]))
     ->element_exists(qq(meta[name="contactnetworkaddress"][content="https://convos.chat"]))
     ->element_exists(qq(meta[name="contactorganization"][content="Convos"]))
-    ->element_exists(qq(meta[name="convos:base_url"][content^="http://"]))
+    ->element_exists(qq(meta[name="convos:base_url"][content^="//"]))
     ->element_exists(qq(meta[name="convos:contact"][content="bWFpbHRvOnJvb3RAbG9jYWxob3N0"]))
     ->element_exists(qq(meta[name="convos:existing_user"][content="no"]))
     ->element_exists(qq(meta[name="convos:first_user"][content="yes"]))

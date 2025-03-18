@@ -18,7 +18,7 @@ $t->post_ok('/api/user/register',
   json => {email => 'superman@example.com', password => 'longenough'})->status_is(200);
 
 $t->get_ok('/chat')->status_is(200)
-  ->element_exists(qq(meta[name="convos:base_url"][content^="http://"]))
+  ->element_exists(qq(meta[name="convos:base_url"][content^="//"]))
   ->element_exists(qq(meta[name="convos:existing_user"][content="no"]))
   ->element_exists(qq(meta[name="convos:first_user"][content="no"]))
   ->element_exists(qq(meta[name="convos:open_to_public"][content="yes"]))
